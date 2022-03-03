@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+body {
+	align-items: center;
+	background-color: #caffbf;
+	display: flex;
+	flex-direction: column;
+	font-family: "Bungee", cursive;
+}
+
+h1 {
+	color: #105f00;
+	font-size: 3rem;
+}
+
+#ticker {
+	text-transform: uppercase;
+}
