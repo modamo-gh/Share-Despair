@@ -1,6 +1,7 @@
 let tickerInput = document.querySelector("#ticker");
 let dateInput = document.querySelector("#date");
 let button = document.querySelector("button");
+let presentValueParagraph = document.querySelector("#presentValue");
 
 let pastTickerData;
 let presentTickerData;
@@ -50,8 +51,9 @@ button.addEventListener("click", function () {
 		const pastOLCH = results[0];
 		const presentOLCH = results[1];
 
-		const ratio = (100 * presentOLCH) / pastOLCH;
+		const ratio = presentOLCH / pastOLCH;
+		const presentValue = (100 * ratio).toFixed(2);
 
-		console.log(ratio);
+		presentValueParagraph.innerHTML = `$${presentValue}`;
 	});
 });
